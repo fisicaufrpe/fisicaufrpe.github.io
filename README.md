@@ -1,2 +1,2 @@
-# fisicaufrpe.github.io
+# http://fisicaufrpe.github.io
 PROJETO COMPUTAÇÃO

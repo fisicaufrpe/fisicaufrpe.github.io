@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>index</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>operações matematicas com matrizes</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11778,60 +11778,300 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="python_fisica.jpg" alt=""></p>
+<h1 id="Numpy">Numpy<a class="anchor-link" href="#Numpy">&#182;</a></h1><h2 id="Manipula&#231;&#227;o-e-opera&#231;&#245;es-com-matrizes">Manipula&#231;&#227;o e opera&#231;&#245;es com matrizes<a class="anchor-link" href="#Manipula&#231;&#227;o-e-opera&#231;&#245;es-com-matrizes">&#182;</a></h2><h3 id="Criando-matriz-4-x-4">Criando matriz 4 x 4<a class="anchor-link" href="#Criando-matriz-4-x-4">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1"># Importa a biblioteca numpy</span>
+<span class="n">matriz</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>   <span class="c1">#Criando matriz 4 x 4</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">matriz</span><span class="p">)</span>
+</pre></div>
 
 </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[ 0  1  2  3]
+ [ 4  5  6  7]
+ [ 8  9 10 11]
+ [12 13 14 15]]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Este-site-tem-por-finalidade-mostrar-a-utilidade-e-praticidade-de-execu&#231;&#227;o-de-simula&#231;&#245;es-f&#237;sicas-com-python.&#182;">Este site tem por finalidade mostrar a utilidade e praticidade de execu&#231;&#227;o de simula&#231;&#245;es f&#237;sicas com python.&#182;<a class="anchor-link" href="#Este-site-tem-por-finalidade-mostrar-a-utilidade-e-praticidade-de-execu&#231;&#227;o-de-simula&#231;&#245;es-f&#237;sicas-com-python.&#182;">&#182;</a></h1><p>Python é uma excelente linguagem de programação e com a ajuda de algumas bibliotecas populares (numpy, scipy, matplotlib) torna-se um ambiente poderoso para a computação científica.</p>
+<h3 id="Exibindo-um-elemento-da-matriz-&quot;o-numero-6&quot;">Exibindo um elemento da matriz "o numero 6"<a class="anchor-link" href="#Exibindo-um-elemento-da-matriz-&quot;o-numero-6&quot;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matriz</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="c1"># Exibe o elemento da linha 1 culuna 2 &quot;lembrando que a contagem das linhas e das colunas começam do &quot;0&quot;</span>
+</pre></div>
 
 </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[41]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>6</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Numpy">Numpy<a class="anchor-link" href="#Numpy">&#182;</a></h1><p>Em computação científica é muito comum o uso de arrays e o <strong>Numpy</strong> tem várias funções, entre elas: manipular arrays N-dimensionais, criar números aleatórios, operações de álgebra linear entre outros.</p>
-<ol>
-<li><a href="criaçãomatrizes.html">Criando Matrizes</a></li>
-<li><a href="operaçãomatrizes.html">Manipulando e operando com Arrays</a> </li>
-</ol>
+<h3 id="Multiplica&#231;&#227;o-cada-elemento-da-matriz--por-2">Multiplica&#231;&#227;o cada elemento da matriz  por 2<a class="anchor-link" href="#Multiplica&#231;&#227;o-cada-elemento-da-matriz--por-2">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrizb</span> <span class="o">=</span> <span class="n">matriz</span><span class="o">*</span><span class="mi">2</span> <span class="c1"># Exibe o produto de cada elemento da matriz por 2</span>
+<span class="n">matrizb</span>
+</pre></div>
 
 </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[47]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[ 0,  2,  4,  6],
+       [ 8, 10, 12, 14],
+       [16, 18, 20, 22],
+       [24, 26, 28, 30]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Matplotlib">Matplotlib<a class="anchor-link" href="#Matplotlib">&#182;</a></h1><p>Matplotlib é uma biblioteca do Python para criação de gráficos em 2D, bastante utilizada para visualização de dados e que apresenta uma série de possibilidades gráficas, como gráficos de barra, linha, pizza, histogramas, entre muitos outros.</p>
-<ol>
-<li><a href="matplotlib.html">Esboçando e configurando gráficos</a></li>
-</ol>
+<h3 id="Nova-matriz-rotacionando-a-anterior">Nova matriz rotacionando a anterior<a class="anchor-link" href="#Nova-matriz-rotacionando-a-anterior">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrizc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">matriz</span><span class="p">)</span> <span class="c1"># Criação de uma nova matriz rotacionando a anterior</span>
+<span class="n">matrizc</span>
+</pre></div>
 
 </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[48]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[ 0,  4,  8, 12],
+       [ 1,  5,  9, 13],
+       [ 2,  6, 10, 14],
+       [ 3,  7, 11, 15]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="VPython"><a href="vpython.html">VPython</a><a class="anchor-link" href="#VPython">&#182;</a></h1><p>VPython é a linguagem de programação Python mais um módulo de gráficos 3D chamado Visual. O VPython permite aos usuários criar objetos como esferas e cones no espaço 3D e exibe esses objetos em uma janela.</p>
-<ol>
-<li>Python como laboratório</li>
-</ol>
+<h3 id="Soma-entre-os-elementos-de-matrizes">Soma entre os elementos de matrizes<a class="anchor-link" href="#Soma-entre-os-elementos-de-matrizes">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matriz</span> <span class="o">+</span> <span class="n">matrizb</span>
+</pre></div>
 
 </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[50]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[ 0,  3,  6,  9],
+       [12, 15, 18, 21],
+       [24, 27, 30, 33],
+       [36, 39, 42, 45]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Subtra&#231;&#227;o-entre-os-elementos-de-matrizes">Subtra&#231;&#227;o entre os elementos de matrizes<a class="anchor-link" href="#Subtra&#231;&#227;o-entre-os-elementos-de-matrizes">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matriz</span> <span class="o">-</span> <span class="n">matrizc</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[54]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[ 0, -3, -6, -9],
+       [ 3,  0, -3, -6],
+       [ 6,  3,  0, -3],
+       [ 9,  6,  3,  0]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Produto-entre-os-elementos-de-matrizes">Produto entre os elementos de matrizes<a class="anchor-link" href="#Produto-entre-os-elementos-de-matrizes">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matriz</span> <span class="o">*</span> <span class="n">matrizb</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[56]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[  0,   2,   8,  18],
+       [ 32,  50,  72,  98],
+       [128, 162, 200, 242],
+       [288, 338, 392, 450]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
     </div>
   </div>

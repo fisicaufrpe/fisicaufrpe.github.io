@@ -11778,7 +11778,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Proj&#233;til">Proj&#233;til<a class="anchor-link" href="#Proj&#233;til">&#182;</a></h1><p>O lançamento oblíquo de objetos foi uma das áreas da física mais bem estudadas por Galileu Galilei, concluindo que este é a sobreposição de dois movimentos independentes. Quando existe ressalto dos objetos podemos comparar o comportamento de diferentes materiais com a sua dissipação de energia. Esta simulação tenta recriar esta situação. Para tal, o utilizador pode escolher alguns parâmetros e comparar os diferentes materiais.</p>
+<h1 id="Proj&#233;til">Proj&#233;til<a class="anchor-link" href="#Proj&#233;til">&#182;</a></h1><h4 id="Voltar-para-a-home."><a href="index.html">Voltar para a home.</a><a class="anchor-link" href="#Voltar-para-a-home.">&#182;</a></h4><p>O lançamento oblíquo de objetos foi uma das áreas da física mais bem estudadas por Galileu Galilei, concluindo que este é a sobreposição de dois movimentos independentes. Quando existe ressalto dos objetos podemos comparar o comportamento de diferentes materiais com a sua dissipação de energia. Esta simulação tenta recriar esta situação. Para tal, o utilizador pode escolher alguns parâmetros e comparar os diferentes materiais.</p>
 
 </div>
 </div>
@@ -11798,122 +11798,19 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="C&#211;DIGO">C&#211;DIGO<a class="anchor-link" href="#C&#211;DIGO">&#182;</a></h3>
+<h3 id="C&#211;DIGO">C&#211;DIGO<a class="anchor-link" href="#C&#211;DIGO">&#182;</a></h3><p><a href="http://www.esramada.pt/esr.media/images/alunos/trabalhos/fisicapython/projetil_v_1.py">http://www.esramada.pt/esr.media/images/alunos/trabalhos/fisicapython/projetil_v_1.py</a></p>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#</span>
-<span class="c1">#Copyright (C) 2012 Iúri Miguel Carolino Martinho</span>
-<span class="c1">#Escola Secundária da Ramada</span>
-<span class="c1">#</span>
-<span class="c1">#This program is free software; you can redistribute it and/or modify it under </span>
-<span class="c1">#the terms of the GNU General Public License as published by the Free Software </span>
-<span class="c1">#Foundation; either version 2 of the License, or (at your option) any later </span>
-<span class="c1">#version.</span>
-<span class="c1">#</span>
-<span class="c1">#This program is distributed in the hope that it will be useful, but WITHOUT </span>
-<span class="c1">#ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS </span>
-<span class="c1">#FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</span>
-<span class="c1">#</span>
- 
-<span class="kn">from</span> <span class="nn">visual</span> <span class="k">import</span> <span class="o">*</span>
-<span class="n">vo</span><span class="o">=</span><span class="mi">0</span>
-<span class="n">a</span><span class="o">=-</span><span class="mf">9.8</span>
-<span class="n">an</span><span class="o">=</span><span class="mi">0</span>
-<span class="n">xo</span><span class="o">=-</span><span class="mi">50</span>
-<span class="n">yo</span><span class="o">=</span><span class="mf">8.65</span>
-<span class="n">yo2</span><span class="o">=-</span><span class="mf">15.35</span>
-<span class="n">yo3</span><span class="o">=-</span><span class="mf">38.35</span>
-<span class="n">yo4</span><span class="o">=</span><span class="mf">31.65</span>
-<span class="n">x</span><span class="o">=</span><span class="mi">0</span>
-<span class="n">y</span><span class="o">=</span><span class="mi">0</span>
- 
-<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;consideremos que o chão é feito de madeira&quot;</span><span class="p">)</span>
- 
-<span class="k">while</span> <span class="n">an</span><span class="o">&lt;=</span><span class="mi">0</span> <span class="ow">or</span> <span class="n">an</span><span class="o">&gt;</span><span class="mi">90</span><span class="p">:</span>
-    <span class="n">an</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span> <span class="p">(</span><span class="s2">&quot;Escolha o angulo de lançamento:&quot;</span><span class="p">))</span>
-    <span class="k">if</span> <span class="n">an</span><span class="o">&lt;=</span><span class="mi">0</span> <span class="ow">or</span> <span class="n">an</span><span class="o">&gt;</span><span class="mi">90</span><span class="p">:</span>
-        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;O angulo tem de estar entre 0 e 90 graus&quot;</span><span class="p">)</span>
-     
-<span class="k">while</span> <span class="n">vo</span><span class="o">&lt;=</span><span class="mi">0</span><span class="p">:</span>
-    <span class="n">vo</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span> <span class="p">(</span><span class="s2">&quot;Escolha a velocidade inicial:&quot;</span><span class="p">))</span>
-    <span class="k">if</span> <span class="n">vo</span> <span class="o">&lt;=</span><span class="mi">0</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A velocidade tem que ser positiva&quot;</span><span class="p">)</span>
- 
-<span class="n">chao</span> <span class="o">=</span> <span class="n">box</span><span class="p">(</span><span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">length</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">material</span><span class="o">=</span><span class="n">materials</span><span class="o">.</span><span class="n">wood</span><span class="p">)</span> 
-<span class="n">bola</span> <span class="o">=</span> <span class="n">sphere</span><span class="p">(</span><span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span><span class="mf">8.65</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">make_trail</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">material</span><span class="o">=</span><span class="n">materials</span><span class="o">.</span><span class="n">wood</span><span class="p">)</span>
-<span class="n">chao2</span> <span class="o">=</span> <span class="n">box</span><span class="p">(</span><span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">17</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">length</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">material</span><span class="o">=</span><span class="n">materials</span><span class="o">.</span><span class="n">wood</span><span class="p">)</span> 
-<span class="n">bola2</span> <span class="o">=</span> <span class="n">sphere</span><span class="p">(</span><span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span><span class="o">-</span><span class="mf">15.35</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">make_trail</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="n">radius</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="o">.</span><span class="n">orange</span><span class="p">)</span>
-<span class="n">chao3</span> <span class="o">=</span> <span class="n">box</span><span class="p">(</span><span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">40</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">length</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">material</span><span class="o">=</span><span class="n">materials</span><span class="o">.</span><span class="n">wood</span><span class="p">)</span> 
-<span class="n">bola3</span> <span class="o">=</span> <span class="n">sphere</span><span class="p">(</span><span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span><span class="o">-</span><span class="mf">38.35</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">make_trail</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">material</span><span class="o">=</span><span class="n">materials</span><span class="o">.</span><span class="n">plastic</span><span class="p">)</span>
-<span class="n">chao4</span> <span class="o">=</span> <span class="n">box</span><span class="p">(</span><span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">length</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">material</span><span class="o">=</span><span class="n">materials</span><span class="o">.</span><span class="n">wood</span><span class="p">)</span> 
-<span class="n">bola4</span> <span class="o">=</span> <span class="n">sphere</span><span class="p">(</span><span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span><span class="mf">31.65</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">make_trail</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="o">.</span><span class="n">blue</span><span class="p">)</span>
-<span class="n">text</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;Madeira&#39;</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">43</span><span class="p">,</span><span class="mf">3.5</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">height</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">depth</span><span class="o">=-</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="o">.</span><span class="n">white</span><span class="p">)</span>
-<span class="n">text</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;Borracha&#39;</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">43</span><span class="p">,</span><span class="o">-</span><span class="mf">21.5</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">height</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">depth</span><span class="o">=-</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="o">.</span><span class="n">orange</span><span class="p">)</span>
-<span class="n">text</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;Plástico&#39;</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">43</span><span class="p">,</span><span class="o">-</span><span class="mf">43.5</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">height</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">depth</span><span class="o">=-</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="o">.</span><span class="n">white</span><span class="p">)</span>
-<span class="n">text</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;Vidro&#39;</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">43</span><span class="p">,</span><span class="mf">26.5</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">height</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">depth</span><span class="o">=-</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="o">.</span><span class="n">blue</span><span class="p">)</span>
- 
-<span class="n">tx</span><span class="o">=</span><span class="mi">0</span>
-<span class="n">ty</span><span class="o">=</span><span class="mi">0</span>
-<span class="n">ty2</span><span class="o">=</span><span class="mi">0</span>
-<span class="n">ty3</span><span class="o">=</span><span class="mi">0</span>
-<span class="n">ty4</span><span class="o">=</span><span class="mi">0</span>
-<span class="n">vox</span><span class="o">=</span><span class="n">vo</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">an</span><span class="o">*</span><span class="n">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">)</span>
-<span class="n">x</span><span class="o">=</span><span class="n">xo</span>
-<span class="n">voy</span><span class="o">=</span><span class="n">vo</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">an</span><span class="o">*</span><span class="n">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">)</span>
-<span class="n">voy2</span><span class="o">=</span><span class="n">vo</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">an</span><span class="o">*</span><span class="n">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">)</span>
-<span class="n">voy3</span><span class="o">=</span><span class="n">vo</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">an</span><span class="o">*</span><span class="n">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">)</span>
-<span class="n">voy4</span><span class="o">=</span><span class="n">vo</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">an</span><span class="o">*</span><span class="n">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">)</span>
-<span class="n">y</span><span class="o">=</span><span class="n">yo</span>
-<span class="n">y2</span><span class="o">=</span><span class="n">yo2</span>
-<span class="n">y3</span><span class="o">=</span><span class="n">yo3</span>
-<span class="n">y4</span><span class="o">=</span><span class="n">yo4</span>
- 
-<span class="k">while</span> <span class="n">true</span><span class="p">:</span>
-    <span class="n">rate</span> <span class="p">(</span><span class="mi">150</span><span class="p">)</span>
-    <span class="n">tx</span><span class="o">=</span><span class="n">tx</span><span class="o">+</span><span class="mf">0.01</span>
-    <span class="n">ty</span><span class="o">=</span><span class="n">ty</span><span class="o">+</span><span class="mf">0.01</span>
-    <span class="n">ty2</span><span class="o">=</span><span class="n">ty2</span><span class="o">+</span><span class="mf">0.01</span>
-    <span class="n">ty3</span><span class="o">=</span><span class="n">ty3</span><span class="o">+</span><span class="mf">0.01</span>
-    <span class="n">ty4</span><span class="o">=</span><span class="n">ty4</span><span class="o">+</span><span class="mf">0.01</span>
-    <span class="n">x</span><span class="o">=</span><span class="n">xo</span><span class="o">+</span><span class="n">vox</span><span class="o">*</span><span class="n">tx</span>
-    <span class="n">bola</span><span class="o">.</span><span class="n">x</span><span class="o">=</span><span class="n">x</span>
-    <span class="n">bola2</span><span class="o">.</span><span class="n">x</span><span class="o">=</span><span class="n">x</span>
-    <span class="n">bola3</span><span class="o">.</span><span class="n">x</span><span class="o">=</span><span class="n">x</span>
-    <span class="n">bola4</span><span class="o">.</span><span class="n">x</span><span class="o">=</span><span class="n">x</span>
-    <span class="n">y</span><span class="o">=</span><span class="n">yo</span><span class="o">+</span><span class="n">voy</span><span class="o">*</span><span class="n">ty</span><span class="o">+</span><span class="n">a</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="n">ty</span><span class="o">**</span><span class="mi">2</span>
-    <span class="n">y2</span><span class="o">=</span><span class="n">yo2</span><span class="o">+</span><span class="n">voy2</span><span class="o">*</span><span class="n">ty2</span><span class="o">+</span><span class="n">a</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="n">ty2</span><span class="o">**</span><span class="mi">2</span>
-    <span class="n">y3</span><span class="o">=</span><span class="n">yo3</span><span class="o">+</span><span class="n">voy3</span><span class="o">*</span><span class="n">ty3</span><span class="o">+</span><span class="n">a</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="n">ty3</span><span class="o">**</span><span class="mi">2</span>
-    <span class="n">y4</span><span class="o">=</span><span class="n">yo4</span><span class="o">+</span><span class="n">voy4</span><span class="o">*</span><span class="n">ty4</span><span class="o">+</span><span class="n">a</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="n">ty4</span><span class="o">**</span><span class="mi">2</span>
-    <span class="n">bola</span><span class="o">.</span><span class="n">y</span><span class="o">=</span><span class="n">y</span>
-    <span class="n">bola2</span><span class="o">.</span><span class="n">y</span><span class="o">=</span><span class="n">y2</span>
-    <span class="n">bola3</span><span class="o">.</span><span class="n">y</span><span class="o">=</span><span class="n">y3</span>
-    <span class="n">bola4</span><span class="o">.</span><span class="n">y</span><span class="o">=</span><span class="n">y4</span>
-    <span class="k">if</span> <span class="n">y</span><span class="o">&lt;</span><span class="mf">8.65</span><span class="p">:</span>
-        <span class="n">ty</span><span class="o">=</span><span class="mi">0</span>
-        <span class="n">voy</span><span class="o">=</span><span class="n">voy</span><span class="o">*</span><span class="mf">0.5</span>
-    <span class="k">if</span> <span class="n">y2</span><span class="o">&lt;-</span><span class="mf">15.35</span><span class="p">:</span>
-        <span class="n">ty2</span><span class="o">=</span><span class="mi">0</span>
-        <span class="n">voy2</span><span class="o">=</span><span class="n">voy2</span><span class="o">*</span><span class="mf">0.81</span>
-    <span class="k">if</span> <span class="n">y3</span><span class="o">&lt;-</span><span class="mf">38.35</span><span class="p">:</span>
-        <span class="n">ty3</span><span class="o">=</span><span class="mi">0</span>
-        <span class="n">voy3</span><span class="o">=</span><span class="n">voy3</span><span class="o">*</span><span class="mf">0.65</span>
-    <span class="k">if</span> <span class="n">y4</span><span class="o">&lt;</span><span class="mf">31.65</span><span class="p">:</span>
-        <span class="n">ty4</span><span class="o">=</span><span class="mi">0</span>
-        <span class="n">voy4</span><span class="o">=</span><span class="n">voy4</span><span class="o">*</span><span class="mf">0.77</span>
-    <span class="k">if</span> <span class="n">voy2</span><span class="o">&lt;=</span><span class="mf">0.1</span><span class="p">:</span>
-        <span class="k">break</span> 
-</pre></div>
-
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Voltar-para-a-home."><a href="index.html">Voltar para a home.</a><a class="anchor-link" href="#Voltar-para-a-home.">&#182;</a></h4>
 </div>
 </div>
-</div>
-
 </div>
     </div>
   </div>
